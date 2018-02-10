@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh_CN" class="has-topbar has-bottombar">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=0, viewport-fit=cover" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description" content="店面描述">
+    <meta name="keywords" content="店面描述">
+    <meta name="author" content="Jiajia">
+    <title>店铺介绍</title>
+    <script>
+        (function setFontSize () {
+            //动态改变根节点字体大小
+            var docEle = document.documentElement,
+                    evt = "onorientationchange" in window ? "orientationchange" : "resize",
+                    fn = function() {
+                        var width = docEle.clientWidth
+                        var height = docEle.clientHeight
+                        var scale = (width / height) / (750 / 1334)
+                        if (height == 812) {
+                            docEle.style.fontSize = "100px"
+                        } else {
+                            width && (docEle.style.fontSize = width / (3.75 * scale) + "px")
+                        }
+                    }
+            window.addEventListener(evt, fn, false)
+            document.addEventListener("DOMContentLoaded", fn, false)
+        })()
+    </script>
+    <link rel="stylesheet" href="./static/css/main.css">
+</head>
+
+<body>
+<!-- 首页 -->
+<div class="basicPage">
+    <!-- 音乐符号 -->
+    <div class="musicBlock">
+        <img src="./static/picture/firstPage_musicIcon.png" alt="musicIcon" class="musicIcon">
+        <div class="musicStop"></div>
+    </div>
+    <!-- 滑动符号 -->
+    <div class="slideGuide">
+        <div class="slideBox1">
+            <div class="slide1"></div>
+        </div>
+        <div class="slideBox2">
+            <div class="slide2"></div>
+        </div>
+    </div>
+    <!-- 第一页的样式 -->
+    <div class="firstPage">
+        <!-- 山 * 2 -->
+        <div class="firstMountBack1">
+            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
+        </div>
+        <div class="firstMountBack2">
+            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
+        </div>
+        <!-- 上半部分的外面两条线 -->
+        <div class="firstTopBackLine"></div>
+        <!-- 上半部分的图案 -->
+        <div class="firstTopHalf">
+            <div class="firstTCircle">
+                <!-- 圆弧轮廓 -->
+                <img src="./static/picture/firstPage_circle_back.png" alt="">
+                <!-- 标题头的文字和背景 -->
+                <div class="firstTopBar">
+                    <p class="firstTbarContent">禅意暖人间<br>，吉福泰祥安<br>。</p>
+                    <div class="firstTbarBlock">
+                        <p>米兰荟</p>
+                    </div>
+                </div>
+                <!-- 苦静悟放文字部分 -->
+                <div class="firstTopBlock">
+                    <div class="firstTBcontent">
+                        <div class="firstTBline"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 下半部分的图案 -->
+        <div class="firstBottomHalf">
+            <!-- 河流 -->
+            <div class="firstBline">
+                <img src="./static/picture/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 文字部分 -->
+            <div class="firstBblock">
+                <p>低眉慈善观</p>
+                <p>佛台端坐立</p>
+                <p>菩提本悠然</p>
+                <p>人心境界远</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二页的样式 -->
+    <div class="secondPage">
+        <!-- 山 * 2 -->
+        <div class="secondMountBack1">
+            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
+        </div>
+        <div class="secondMountBack2">
+            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
+        </div>
+        <!-- 云彩 -->
+        <div class="secondBline">
+            <img src="./static/picture/firstPage_line3.png" alt="line3">
+        </div>
+        <!-- 介绍牌 -->
+        <div class="secondBlock">
+        </div>
+        <!-- 河流 -->
+        <div class="secondBline1"></div>
+        <!-- 第二页文章细节 -->
+        <div class="secondBback">
+            <p class="secondBtitle">
+                品牌简介
+            </p>
+            <p class="secondBcontent">
+                米兰荟源于香港，是集美容，高端服装，美发为一体的商业中心，米兰荟公司成立超过十年，本分店位于武昌秦园东路最繁华的街道水岸星城高端小区，本店定位高端奢华，技术专业，本店一直秉承给顾客带来最前沿的时尚理念，为广大消费者服务。
+            </p>
+            <!-- 鸟 -->
+            <div class="secondBbird">
+                <img src="./static/picture/secondPage_bird.png" alt="bird">
+            </div>
+        </div>
+
+        <!-- 第七页文章细节 -->
+        <div class="seventhBback">
+            <div class="seventhBtitle">
+                体验卡优惠
+            </div>
+            <div class="seventhBturn">
+                <span>198</span>元体验卡
+            </div>
+            <div class="seventhBcontent">
+                1.价值680元精致面部护理1次<br>
+                2.价值680元精致眼部护理1次<br>
+                3.价值398元仙丹肩颈化结1次<br>
+                4.价值398元非洲野姜肾1次<br>
+                5.价值680元专家胸部检测1次
+            </div>
+            <!-- 鱼 -->
+            <div class="seventhBfish">
+                <img src="./static/picture/seventhPage_fish.png" alt="fish">
+            </div>
+        </div>
+    </div>
+
+    <!-- 第三~六页的样式 -->
+    <div class="thirdPage">
+        <!-- 头部文字 -->
+        <div class="thirdPageBar">
+            <div>新店开业</div>
+            <div>感恩回馈</div>
+        </div>
+        <div class="thirdPageTitle">
+            <p class="thirdTitle1">
+                优惠活动
+            </p>
+            <p class="thirdTitle2">
+                优惠一
+            </p>
+            <p class="thirdTitle3">
+                综合卡充值20000元<br>
+                送卡金5000元<br>
+                送玉石艾灸肩颈、腰肾、腿足一个季度<br>
+                价值6800元
+            </p>
+        </div>
+        <!-- 山 * 2 -->
+        <div class="thirdMountBack1">
+            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
+        </div>
+        <div class="thirdMountBack2">
+            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
+        </div>
+        <!-- 云彩 -->
+        <div class="thirdBline">
+            <img src="./static/picture/firstPage_line3.png" alt="line3">
+        </div>
+        <!-- 河流 -->
+        <div class="thirdBline1"></div>
+        <!-- 店铺图片展示 -->
+        <div class="thirdBcard">
+            <img src="./static/picture/shophoto/thirdPage.png" alt="introduce" class="thirdBcardback">
+        </div>
+        <div class="fourthBcard">
+            <img src="./static/picture/shophoto/fourthPage.png" alt="introduce" class="fourthBcardback">
+        </div>
+        <div class="fifthBcard">
+            <img src="./static/picture/shophoto/fifthPage.png" alt="introduce" class="fifthBcardback">
+        </div>
+        <div class="sixthBcard">
+            <img src="./static/picture/shophoto/sixthPage.png" alt="introduce" class="sixthBcardback">
+        </div>
+    </div>
+    
+    <!-- 第八、九页的样式 -->
+    <div class="eighthPage">
+        <!-- 头部文字 -->
+        <div class="eighthPageBar">
+            <div>新店开业</div>
+            <div>感恩回馈</div>
+        </div>
+        <div class="eighthPageTitle">
+            店铺展示
+        </div>
+        <!-- 山 * 2 -->
+        <div class="eighthMountBack1">
+            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
+        </div>
+        <div class="eighthMountBack2">
+            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
+        </div>
+        <!-- 云彩 -->
+        <div class="eighthBline">
+            <img src="./static/picture/firstPage_line3.png" alt="line3">
+        </div>
+        <!-- 河流 -->
+        <div class="eighthBline1"></div>
+        <!-- 第八页店铺图片展示 -->
+        <div class="eighthBcards">
+            <div class="eighthBcard1">
+                <img src="./static/picture/shophoto/eighthPageBack1.png" alt="introduce" class="eighthBcardback1">
+            </div>
+            <div class="eighthBcard2">
+                <img src="./static/picture/shophoto/eighthPageBack2.png" alt="introduce" class="eighthBcardback2">
+            </div>
+        </div>
+
+        <!-- 第九页店铺图片展示 -->
+        <div class="ninthBcards">
+            <div class="ninthBcard1">
+                <img src="./static/picture/shophoto/ninthPageBack1.png" alt="introduce" class="ninthBcardback1">
+            </div>
+            <div class="ninthBcard2">
+                <img src="./static/picture/shophoto/ninthPageBack2.png" alt="introduce" class="ninthBcardback2">
+            </div>
+        </div>
+    </div>
+
+    <!-- 最后一页样式 -->
+    <div class="lastPage">
+        <div class="lastPageBar"></div>
+        <div class="lastPageTitle">
+            联系我们
+        </div>
+        <!-- 位置信息图 -->
+        <div class="lastPageLocation">
+            <img src="./static/picture/shophoto/lastPageBack.png" alt="location">
+        </div>
+        <!-- 山 * 2 -->
+        <div class="lastMountBack1">
+            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
+        </div>
+        <div class="lastMountBack2">
+            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
+        </div>
+        <!-- 云彩 -->
+        <div class="lastBline">
+            <img src="./static/picture/firstPage_line3.png" alt="line3">
+        </div>
+        <!-- 河流 -->
+        <div class="lastBline1"></div>
+        <!-- 详细信息部分 -->
+        <div class="lastPageConnection">
+            <div class="lastPagePlace">
+                <div>地址：</div>
+                <div>武汉市武昌区秦园东水岸星城<br>2b1-1-6号</div>
+            </div>
+            <div class="lastPagePhone">电话：027-88716999
+            </div>
+            <div class="lastPageOwner">联系人：米兰荟时尚美容养生
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="./static/js/index.js"></script>
+</body>
+</html>
