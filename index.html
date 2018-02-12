@@ -11,7 +11,7 @@
     <meta name="description" content="店面描述">
     <meta name="keywords" content="店面描述">
     <meta name="author" content="Jiajia">
-    <title>店铺介绍</title>
+    <title>分享健康，绽放芳华</title>
     <script>
         (function setFontSize () {
             //动态改变根节点字体大小
@@ -31,15 +31,27 @@
             document.addEventListener("DOMContentLoaded", fn, false)
         })()
     </script>
-    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="preload" href="./static/font/special.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="./static/font/special.ttf" as="font" type="font/ttf" crossorigin>
+    
+    <link rel="stylesheet" href="./static/css/main.min.css">
+<!--     <link rel="stylesheet" href="./static/css/swiper.css">
+    <link rel="stylesheet" href="./static/css/animate.css">
+    <link rel="stylesheet" href="./static/css/main.css"> -->
 </head>
 
 <body>
+<audio class="audio" loop="loop">
+    <source src="./static/audio/music.mp3" type="audio/mp3">
+    <source src="./static/audio/music.m4a" type="audio/mpeg" />
+    <source src="./static/audio/music.ogg" type="audio/ogg" />
+</audio>
+
 <!-- 首页 -->
-<div class="basicPage">
+<div class="swiper-container">
     <!-- 音乐符号 -->
     <div class="musicBlock">
-        <img src="./static/picture/firstPage_musicIcon.png" alt="musicIcon" class="musicIcon">
+        <img src="./static/pic/firstPage_musicIcon.png" alt="musicIcon" class="musicIcon">
         <div class="musicStop"></div>
     </div>
     <!-- 滑动符号 -->
@@ -51,239 +63,460 @@
             <div class="slide2"></div>
         </div>
     </div>
-    <!-- 第一页的样式 -->
-    <div class="firstPage">
-        <!-- 山 * 2 -->
-        <div class="firstMountBack1">
-            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
-        </div>
-        <div class="firstMountBack2">
-            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
-        </div>
-        <!-- 上半部分的外面两条线 -->
-        <div class="firstTopBackLine"></div>
-        <!-- 上半部分的图案 -->
-        <div class="firstTopHalf">
-            <div class="firstTCircle">
-                <!-- 圆弧轮廓 -->
-                <img src="./static/picture/firstPage_circle_back.png" alt="">
-                <!-- 标题头的文字和背景 -->
-                <div class="firstTopBar">
-                    <p class="firstTbarContent">禅意暖人间<br>，吉福泰祥安<br>。</p>
-                    <div class="firstTbarBlock">
-                        <p>米兰荟</p>
+
+    <div class="logoBlock"></div>
+
+    <div class="swiper-wrapper">
+        <!-- 第一页的样式 -->
+        <div class="swiper-slide">
+            <!-- 山 * 2 -->
+            <div class="firstMountBack1 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration=".8s" swiper-animate-delay="6s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="firstMountBack2 ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration=".6s" swiper-animate-delay="5.2s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 云彩 -->
+            <div class="firstTopBackLine ani" swiper-animate-effect="slideInDown" swiper-animate-duration="2s" swiper-animate-delay="3.3s"></div>
+            <!-- 上半部分的图案 -->
+            <div class="firstTopHalf">
+                <!-- 彩色房子 -->
+                <div class="firstTCircle ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1.2s" swiper-animate-delay=".1s">
+                    <!-- 圆弧轮廓 -->
+                    <img src="./static/pic/firstPage_circle_back.png" alt="">
+                    <!-- 标题头的文字和背景 -->
+                    <div class="firstTopBar">
+                        <p class="firstTbarContent">时尚美容养生殿</p>
+                        <div class="firstTbarBlock animated pulse infinite">
+                            <p>米兰荟</p>
+                        </div>
                     </div>
-                </div>
-                <!-- 苦静悟放文字部分 -->
-                <div class="firstTopBlock">
-                    <div class="firstTBcontent">
-                        <div class="firstTBline"></div>
+                    <div class="firstTopMark ani" swiper-animate-effect="scale" swiper-animate-duration="1s" swiper-animate-delay="6.7s">
+                        <img src="./static/pic/firstPage_mark_content.png" alt="markContent">
+                    </div>
+                    <!-- 苦静悟放文字部分 -->
+                    <div class="firstTopBlock">
+                        <div class="firstTBcontent">
+                            <div class="firstTBline"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- 下半部分的图案 -->
+            <div class="firstBottomHalf">
+                <!-- 河流 -->
+                <div class="firstBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay=".8s">
+                    <img src="./static/pic/firstPage_line3.png" alt="line3">
+                </div>
+                <!-- 文字部分 -->
+                <div class="firstBblock ani" swiper-animate-effect="slideInUp" swiper-animate-duration="1.5s" swiper-animate-delay="2s">
+                    <p>健康同行</p>
+                    <p>芳华绽放</p>
+                </div>
+            </div>
         </div>
-        <!-- 下半部分的图案 -->
-        <div class="firstBottomHalf">
+
+        <!-- 第二页的样式 -->
+        <div class="swiper-slide">
+            <!-- 山 * 2 -->
+            <div class="secondMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".7s" swiper-animate-delay="3.9s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="secondMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".7s" swiper-animate-delay="3.3s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
             <!-- 河流 -->
-            <div class="firstBline">
-                <img src="./static/picture/firstPage_line3.png" alt="line3">
+            <div class="secondBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".5s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
             </div>
-            <!-- 文字部分 -->
-            <div class="firstBblock">
-                <p>低眉慈善观</p>
-                <p>佛台端坐立</p>
-                <p>菩提本悠然</p>
-                <p>人心境界远</p>
+            <!-- 介绍牌 -->
+            <div class="secondBlock ani" swiper-animate-effect="slideInDown" swiper-animate-duration=".8s" swiper-animate-delay="0s">
+            </div>
+            <!-- 云彩 -->
+            <div class="secondBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="2s" swiper-animate-delay="2s"></div>
+            <!-- 第二页文章细节 -->
+            <div class="secondBback ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay=".8s">
+                <p class="secondBtitle">
+                    品牌简介
+                </p>
+                <p class="secondBcontent">
+                    源自香港的【米兰荟】，是一家集专业美容美发及品牌服装于一体的高端休闲养生会所，深耕武汉十余载，实力雄厚，闻名遐迩。本分店新落成于繁华喧闹的徐东商区秦园东路上，毗邻风光旖旎的沙湖公园，背靠高档小区——水岸星城，是众多追求高品质生活政商人士理想的健康选择。公司全体员工一如既往地秉承前沿时尚的服务理念，以奢华典雅的体验环境和专业贴心的精英团队热情恭候您的莅临。
+                </p>
+                <!-- 鸟 -->
+                <div class="secondBbird">
+                    <img src="./static/pic/secondPage_bird.png" alt="bird">
+                </div>
+            </div>
+        </div>
+
+        <!-- 第三页的样式 -->
+        <div class="swiper-slide">
+            <!-- 头部文字 -->
+            <div class="thirdPageBar ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div>新店开业</div>
+                <div>感恩回馈</div>
+            </div>
+            <div class="thirdPageTitle">
+                <p class="thirdTitle1 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="3s">
+                    新年钜惠
+                </p>
+                <p class="thirdTitle2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s">
+                    优惠一
+                </p>
+                <p class="thirdTitle3 ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="5s">
+                    植能静特色金手指肩颈，原价 <del>4800元</del><br>
+                    现只需3980元/10次<br>
+                    再送10次仪器项目<br>
+                </p>
+            </div>
+            <!-- 山 * 2 -->
+            <div class="thirdMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".8s" swiper-animate-delay="6.6s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="thirdMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".7s" swiper-animate-delay="2.5s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="thirdBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".8s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 云彩 -->
+            <div class="thirdBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s"></div>
+            <!-- 店铺图片展示 -->
+            <div class="thirdBcard ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1.2s" swiper-animate-delay=".5s">
+                <img src="./static/pic/thirdPage.png" alt="introduce" class="thirdBcardback">
+            </div>
+        </div>
+
+        <!-- 第四页的样式 -->
+        <div class="swiper-slide">
+            <!-- 头部文字 -->
+            <div class="fourthPageBar ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div>新店开业</div>
+                <div>感恩回馈</div>
+            </div>
+            <div class="fourthPageTitle">
+                <p class="fourthTitle1 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="3s">
+                    新年钜惠
+                </p>
+                <p class="fourthTitle2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s">
+                    优惠二
+                </p>
+                <p class="fourthTitle3 ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="5s">
+                    植能静特色非洲野姜肾，原价 <del>3800元</del><br>
+                    现只需2680元/10次<br>
+                    再送10次臀疗<br>
+                </p>
+            </div>
+            <!-- 山 * 2 -->
+            <div class="fourthMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".8s" swiper-animate-delay="6.6s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="fourthMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".7s" swiper-animate-delay="2.5s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="fourthBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".8s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 云彩 -->
+            <div class="fourthBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s"></div>
+            <!-- 店铺图片展示 -->
+            <div class="fourthBcard ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1.2s" swiper-animate-delay=".5s">
+                <img src="./static/pic/fourthPage.png" alt="introduce" class="fourthBcardback">
+            </div>
+        </div>
+
+        <!-- 第五页的样式 -->
+        <div class="swiper-slide">
+            <!-- 头部文字 -->
+            <div class="fifthPageBar ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div>新店开业</div>
+                <div>感恩回馈</div>
+            </div>
+            <div class="fifthPageTitle">
+                <p class="fifthTitle1 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="3s">
+                    新年钜惠
+                </p>
+                <p class="fifthTitle2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s">
+                    优惠三、四
+                </p>
+                <p class="fifthTitle3 ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="5s">
+                    沥美川深层活氧保湿疗程，原价 <del>6800元</del><br>
+                    现只需3980元/10次<br>
+                    再送10次<br>
+                    沥美川基因细胞塑形疗程，原价 <del>9800元</del><br>
+                    现只需4880元/10次<br>
+                    再送10次
+                </p>
+            </div>
+            <!-- 山 * 2 -->
+            <div class="fifthMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".8s" swiper-animate-delay="6.6s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="fifthMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".7s" swiper-animate-delay="2.5s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="fifthBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".8s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 云彩 -->
+            <div class="fifthBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s"></div>
+            <!-- 店铺图片展示 -->
+            <div class="fifthBcard ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1.2s" swiper-animate-delay=".5s">
+                <img src="./static/pic/fifthPage.png" alt="introduce" class="fifthBcardback">
+            </div>
+        </div>
+
+        <!-- 第六页的样式 -->
+        <div class="swiper-slide">
+            <!-- 头部文字 -->
+            <div class="sixthPageBar ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div>新店开业</div>
+                <div>感恩回馈</div>
+            </div>
+            <div class="sixthPageTitle">
+                <p class="sixthTitle1 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="3s">
+                    新年钜惠
+                </p>
+                <p class="sixthTitle2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s">
+                    优惠五
+                </p>
+                <p class="sixthTitle3 ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="5s">
+                    水润活氧沙龙，原价 <del>3800元</del><br>
+                    现只需1880元/10次<br>
+                    再送10次眼护
+                </p>
+            </div>
+            <!-- 山 * 2 -->
+            <div class="sixthMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".8s" swiper-animate-delay="6.6s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="sixthMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".7s" swiper-animate-delay="2.5s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="sixthBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".8s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 云彩 -->
+            <div class="sixthBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s"></div>
+            <!-- 店铺图片展示 -->
+            <div class="sixthBcard ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1.2s" swiper-animate-delay=".5s">
+                <img src="./static/pic/sixthPage.png" alt="introduce" class="sixthBcardback">
+            </div>
+        </div>
+
+        <!-- 第七页的样式 -->
+        <div class="swiper-slide">
+            <!-- 山 * 2 -->
+            <div class="seventhMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".7s" swiper-animate-delay="3.9s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="seventhMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".7s" swiper-animate-delay="3.3s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="seventhBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".5s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 介绍牌 -->
+            <div class="seventhBlock ani" swiper-animate-effect="slideInDown" swiper-animate-duration=".8s" swiper-animate-delay="0s">
+            </div>
+            <!-- 云彩 -->
+            <div class="seventhBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="2s" swiper-animate-delay="2s"></div>
+            <!-- 第七页文章细节 -->
+            <div class="seventhBback ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay=".8s">
+                <div class="seventhBtitle">
+                    优惠活动
+                </div>
+                <div class="seventhBturn">
+                    到店即有<span>礼</span>相<span>送</span>
+                </div>
+                <div class="seventhBcontent">
+                    <p>
+                        <span>沥美川面护</span>单价：<strong>298</strong>元<br>
+                        功效：全息基因类细胞营养护理产品，可达到微整形级别的护肤品
+                    </p>
+                    <p>
+                        <span>特色金手指仙丹化洁肩颈</span>单价：<strong>398</strong>元<br>
+                        功效：100%天然纯植物精华素，智能调理无痛化结
+                    </p>
+                    <p>
+                        <span>玉石艾炙全身</span>单价：<strong>298</strong>元<br>
+                        功效：智能玉石，艾灸养生，驱寒化湿，具有红外线消炎、抗癌作用
+                    </p>
+                    <p>
+                        <span>非洲野姜肾</span>单价：<strong>398</strong>元<br>
+                        功效：持续发热4-8小时，深层排湿寒，内热外不热
+                    </p>
+                </div>
+                <!-- 鱼 -->
+                <div class="seventhBfish">
+                    <img src="./static/pic/seventhPage_fish.png" alt="fish">
+                </div>
+            </div>
+        </div>
+
+        <!-- 第七页分页的样式 -->
+        <div class="swiper-slide">
+            <!-- 山 * 2 -->
+            <div class="seventhMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".7s" swiper-animate-delay="3.9s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="seventhMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".7s" swiper-animate-delay="3.3s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="seventhBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".5s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 介绍牌 -->
+            <div class="seventhBlock ani" swiper-animate-effect="slideInDown" swiper-animate-duration=".8s" swiper-animate-delay="0s">
+            </div>
+            <!-- 云彩 -->
+            <div class="seventhBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="2s" swiper-animate-delay="2s"></div>
+            <!-- 第七页文章细节 -->
+            <div class="seventhBback ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay=".8s">
+                <div class="seventhBtitle">
+                    优惠活动
+                </div>
+                <div class="seventhBturn">
+                    到店即有<span>礼</span>相<span>送</span>
+                </div>
+                <div class="seventhBcontent">
+                    <p>
+                        <span>智能胸部检测仪</span>单价：<strong>698</strong>元<br>
+                        功效：专业红外乳腺检测仪，无辐射，无创伤智能检测
+                    </p>
+                    <p>
+                        <span>SPA生化烫+营养染发</span>单价：<strong>598</strong>元<br>
+                        功效：烫染可以一次性完成，烫染后发质柔顺，弹性好，卷度自然，容易整理，且不易褪色。
+                    </p>
+                </div>
+                <div class="seventhBspecial">
+                    <strong>VIP体验券</strong>仅需<span>128</span>元<br>
+                    超值体验价值2668元项目
+                </div>
+                <!-- 鱼 -->
+                <div class="seventhBfish">
+                    <img src="./static/pic/seventhPage_fish.png" alt="fish">
+                </div>
+            </div>
+        </div>
+
+        <!-- 第八页的样式 -->
+        <div class="swiper-slide">
+            <!-- 头部文字 -->
+            <div class="eighthPageBar ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div>新店开业</div>
+                <div>感恩回馈</div>
+            </div>
+            <div class="eighthPageTitle ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
+                店铺展示
+            </div>
+            <!-- 山 * 2 -->
+            <div class="eighthMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".9s" swiper-animate-delay="4.2s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="eighthMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".8s" swiper-animate-delay="3.5s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="eighthBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".8s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 云彩 -->
+            <div class="eighthBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="2s" swiper-animate-delay="2s"></div>
+            <!-- 第八页店铺图片展示 -->
+            <div class="eighthBcards">
+                <div class="eighthBcard1 ani" swiper-animate-effect="bounceInDown" swiper-animate-duration=".8s" swiper-animate-delay="1s">
+                    <img src="./static/pic/eighthPageBack1.png" alt="introduce" class="eighthBcardback1">
+                </div>
+                <div class="eighthBcard2 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration=".8s" swiper-animate-delay=".3s">
+                    <img src="./static/pic/eighthPageBack2.png" alt="introduce" class="eighthBcardback2">
+                </div>
+            </div>
+        </div>
+
+        <!-- 第九页的样式 -->
+        <div class="swiper-slide">
+            <!-- 头部文字 -->
+            <div class="ninthPageBar ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div>新店开业</div>
+                <div>感恩回馈</div>
+            </div>
+            <div class="ninthPageTitle ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
+                店铺展示
+            </div>
+            <!-- 山 * 2 -->
+            <div class="ninthMountBack1 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".9s" swiper-animate-delay="4.2s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="ninthMountBack2 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".8s" swiper-animate-delay="3.5s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="ninthBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration=".8s" swiper-animate-delay=".2s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 云彩 -->
+            <div class="ninthBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="2s" swiper-animate-delay="2s"></div>
+            <!-- 第九页店铺图片展示 -->
+            <div class="ninthBcards">
+                <div class="ninthBcard1 ani" swiper-animate-effect="bounceInDown" swiper-animate-duration=".8s" swiper-animate-delay="1s">
+                    <img src="./static/pic/ninthPageBack1.png" alt="introduce" class="ninthBcardback1">
+                </div>
+                <div class="ninthBcard2 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration=".8s" swiper-animate-delay=".3s">
+                    <img src="./static/pic/ninthPageBack2.png" alt="introduce" class="ninthBcardback2">
+                </div>
+            </div>
+        </div>
+
+        <!-- 最后一页样式 -->
+        <div class="swiper-slide">
+            <div class="lastPageBar ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+            <div class="lastPageTitle ani" swiper-animate-effect="jackInTheBox" swiper-animate-duration=".7s" swiper-animate-delay=".8s">
+                联系我们
+            </div>
+            <!-- 位置信息图 -->
+            <div class="lastPageLocation ani" swiper-animate-effect="bounceInDown" swiper-animate-duration=".8s" swiper-animate-delay="2.4s">
+                <img src="./static/pic/lastPageBack.png" alt="location">
+            </div>
+            <!-- 山 * 2 -->
+            <div class="lastMountBack1 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration=".9s" swiper-animate-delay="4.5s">
+                <img src="./static/pic/firstPage_mount_right.png" alt="mount">
+            </div>
+            <div class="lastMountBack2 ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration=".8s" swiper-animate-delay="3.8s">
+                <img src="./static/pic/firstPage_mount_left.png" alt="mount">
+            </div>
+            <!-- 河流 -->
+            <div class="lastBline ani" swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="3s">
+                <img src="./static/pic/firstPage_line3.png" alt="line3">
+            </div>
+            <!-- 云彩 -->
+            <div class="lastBline1 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
+            <!-- 详细信息部分 -->
+            <div class="lastPageConnection">
+                <div class="lastPagePlace ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="5.5s">
+                    <div>地址：</div>
+                    <div>武汉市武昌区秦园东水岸星城<br>2b1-1-6号</div>
+                </div>
+                <div class="lastPagePhone ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="6.5s">电话：027-88716999
+                </div>
+                <div class="lastPageOwner ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="7.5s">联系人：米兰荟养生健康顾问
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- 第二页的样式 -->
-    <div class="secondPage">
-        <!-- 山 * 2 -->
-        <div class="secondMountBack1">
-            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
-        </div>
-        <div class="secondMountBack2">
-            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
-        </div>
-        <!-- 云彩 -->
-        <div class="secondBline">
-            <img src="./static/picture/firstPage_line3.png" alt="line3">
-        </div>
-        <!-- 介绍牌 -->
-        <div class="secondBlock">
-        </div>
-        <!-- 河流 -->
-        <div class="secondBline1"></div>
-        <!-- 第二页文章细节 -->
-        <div class="secondBback">
-            <p class="secondBtitle">
-                品牌简介
-            </p>
-            <p class="secondBcontent">
-                米兰荟源于香港，是集美容，高端服装，美发为一体的商业中心，米兰荟公司成立超过十年，本分店位于武昌秦园东路最繁华的街道水岸星城高端小区，本店定位高端奢华，技术专业，本店一直秉承给顾客带来最前沿的时尚理念，为广大消费者服务。
-            </p>
-            <!-- 鸟 -->
-            <div class="secondBbird">
-                <img src="./static/picture/secondPage_bird.png" alt="bird">
-            </div>
-        </div>
-
-        <!-- 第七页文章细节 -->
-        <div class="seventhBback">
-            <div class="seventhBtitle">
-                体验卡优惠
-            </div>
-            <div class="seventhBturn">
-                <span>198</span>元体验卡
-            </div>
-            <div class="seventhBcontent">
-                1.价值680元精致面部护理1次<br>
-                2.价值680元精致眼部护理1次<br>
-                3.价值398元仙丹肩颈化结1次<br>
-                4.价值398元非洲野姜肾1次<br>
-                5.价值680元专家胸部检测1次
-            </div>
-            <!-- 鱼 -->
-            <div class="seventhBfish">
-                <img src="./static/picture/seventhPage_fish.png" alt="fish">
-            </div>
-        </div>
-    </div>
-
-    <!-- 第三~六页的样式 -->
-    <div class="thirdPage">
-        <!-- 头部文字 -->
-        <div class="thirdPageBar">
-            <div>新店开业</div>
-            <div>感恩回馈</div>
-        </div>
-        <div class="thirdPageTitle">
-            <p class="thirdTitle1">
-                优惠活动
-            </p>
-            <p class="thirdTitle2">
-                优惠一
-            </p>
-            <p class="thirdTitle3">
-                综合卡充值20000元<br>
-                送卡金5000元<br>
-                送玉石艾灸肩颈、腰肾、腿足一个季度<br>
-                价值6800元
-            </p>
-        </div>
-        <!-- 山 * 2 -->
-        <div class="thirdMountBack1">
-            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
-        </div>
-        <div class="thirdMountBack2">
-            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
-        </div>
-        <!-- 云彩 -->
-        <div class="thirdBline">
-            <img src="./static/picture/firstPage_line3.png" alt="line3">
-        </div>
-        <!-- 河流 -->
-        <div class="thirdBline1"></div>
-        <!-- 店铺图片展示 -->
-        <div class="thirdBcard">
-            <img src="./static/picture/shophoto/thirdPage.png" alt="introduce" class="thirdBcardback">
-        </div>
-        <div class="fourthBcard">
-            <img src="./static/picture/shophoto/fourthPage.png" alt="introduce" class="fourthBcardback">
-        </div>
-        <div class="fifthBcard">
-            <img src="./static/picture/shophoto/fifthPage.png" alt="introduce" class="fifthBcardback">
-        </div>
-        <div class="sixthBcard">
-            <img src="./static/picture/shophoto/sixthPage.png" alt="introduce" class="sixthBcardback">
-        </div>
-    </div>
-    
-    <!-- 第八、九页的样式 -->
-    <div class="eighthPage">
-        <!-- 头部文字 -->
-        <div class="eighthPageBar">
-            <div>新店开业</div>
-            <div>感恩回馈</div>
-        </div>
-        <div class="eighthPageTitle">
-            店铺展示
-        </div>
-        <!-- 山 * 2 -->
-        <div class="eighthMountBack1">
-            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
-        </div>
-        <div class="eighthMountBack2">
-            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
-        </div>
-        <!-- 云彩 -->
-        <div class="eighthBline">
-            <img src="./static/picture/firstPage_line3.png" alt="line3">
-        </div>
-        <!-- 河流 -->
-        <div class="eighthBline1"></div>
-        <!-- 第八页店铺图片展示 -->
-        <div class="eighthBcards">
-            <div class="eighthBcard1">
-                <img src="./static/picture/shophoto/eighthPageBack1.png" alt="introduce" class="eighthBcardback1">
-            </div>
-            <div class="eighthBcard2">
-                <img src="./static/picture/shophoto/eighthPageBack2.png" alt="introduce" class="eighthBcardback2">
-            </div>
-        </div>
-
-        <!-- 第九页店铺图片展示 -->
-        <div class="ninthBcards">
-            <div class="ninthBcard1">
-                <img src="./static/picture/shophoto/ninthPageBack1.png" alt="introduce" class="ninthBcardback1">
-            </div>
-            <div class="ninthBcard2">
-                <img src="./static/picture/shophoto/ninthPageBack2.png" alt="introduce" class="ninthBcardback2">
-            </div>
-        </div>
-    </div>
-
-    <!-- 最后一页样式 -->
-    <div class="lastPage">
-        <div class="lastPageBar"></div>
-        <div class="lastPageTitle">
-            联系我们
-        </div>
-        <!-- 位置信息图 -->
-        <div class="lastPageLocation">
-            <img src="./static/picture/shophoto/lastPageBack.png" alt="location">
-        </div>
-        <!-- 山 * 2 -->
-        <div class="lastMountBack1">
-            <img src="./static/picture/firstPage_mount_right.png" alt="mount">
-        </div>
-        <div class="lastMountBack2">
-            <img src="./static/picture/firstPage_mount_left.png" alt="mount">
-        </div>
-        <!-- 云彩 -->
-        <div class="lastBline">
-            <img src="./static/picture/firstPage_line3.png" alt="line3">
-        </div>
-        <!-- 河流 -->
-        <div class="lastBline1"></div>
-        <!-- 详细信息部分 -->
-        <div class="lastPageConnection">
-            <div class="lastPagePlace">
-                <div>地址：</div>
-                <div>武汉市武昌区秦园东水岸星城<br>2b1-1-6号</div>
-            </div>
-            <div class="lastPagePhone">电话：027-88716999
-            </div>
-            <div class="lastPageOwner">联系人：米兰荟时尚美容养生
-            </div>
-        </div>
-    </div>
 </div>
 
-
-
-<script src="./static/js/index.js"></script>
+<script src="./static/js/main.min.js"></script>
+<!-- <script src="./static/js/aswiper.js"></script>
+<script src="./static/js/bswiper.animation.js"></script>
+<script src="./static/js/cjweixin.js"></script>
+<script src="./static/js/index.js"></script> -->
 </body>
 </html>

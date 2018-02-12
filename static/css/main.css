@@ -1,3 +1,114 @@
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .has-topbar {
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 75px;
+    }
+    .has-topbar::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        background-color: #000000;
+        z-index: 9998;
+    }
+    .has-bottombar {
+        height: 100%;
+        box-sizing: border-box;
+        padding-bottom: 65px;
+    }
+    .has-bottombar:after {
+        content: '';
+        z-index: 9998;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 65px;
+        background: #f7f7f8;
+    }
+    .musicBlock {
+	    top: .9rem !important;
+	}
+	.slideGuide {
+	    bottom: .9rem !important;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.firstBline {
+	    width: 4rem !important;
+	    height: 2.9rem !important;
+	}
+	.lastBline {
+	    width: 4rem !important;
+	    height: 2.45rem !important;
+	}
+	.firstBblock {
+	    left: 2.25rem !important;
+	}
+	.firstTopBackLine {
+	    width: 4.5rem !important; 
+	}
+	.secondBline1, .thirdBline1,
+	.fourthBline1, .fifthBline1,
+	.sixthBline1, .seventhBline1,
+	.eighthBline1, .ninthBline1,
+	.lastBline1 {
+	    width: 4.6rem !important;
+	    height: 3rem !important;
+	}
+	.secondBlock, .seventhBlock {
+	    width: 3.5rem !important;
+	    height: 5rem !important;
+	}
+	.secondBback, .seventhBback {
+	    width: 3rem !important;
+	    height: 4.4rem !important;
+	}
+	.secondBcontent {
+	    padding: 0 .15rem !important;
+	    font-size: .13rem !important;
+	    line-height: .26rem !important;
+	}
+	.thirdBcard, .fourthBcard,
+	.fifthBcard, .sixthBcard,
+	.eighthBcard1, .ninthBcard1,
+	.eighthBcard2, .ninthBcard2 {
+	    width: 4rem !important;
+	    height: 2.6rem !important;
+	}
+	.thirdBcardback, .eighthBcardback2, .eighthBcardback1 {
+	    width: 3.6rem !important;
+	    height: 2.4rem !important;
+	}
+	.fourthBcardback, .ninthBcardback2 {
+	    width: 3.7rem !important;
+	    height: 2.1rem !important;
+	}
+	.fifthBcardback, .sixthBcardback, .ninthBcardback1 {
+	    width: 3.6rem !important;
+	    height: 2.2rem !important;
+	}
+	.seventhBcontent {
+    	padding: 0 .25rem !important;
+	    font-size: .17rem !important;
+	}
+	.eighthBcard1, .ninthBcard1 {
+	    top: 1.1rem !important;
+	}
+	.eighthBcard2, .ninthBcard2 {
+	    bottom: .3rem !important;
+	}
+	.lastPageConnection {
+	    bottom: 1rem !important;
+	    left: .7rem !important;
+	}
+}
+
+
 @font-face {
 	font-family: 'special';
 	src: url('../font/special.eot');
@@ -10,6 +121,7 @@
 }
 
 html, body {
+	position: relative;
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -22,7 +134,7 @@ body {
 	font-family: 'special';
 }
 /*宣纸背景，通用*/
-.basicPage {
+.swiper-container {
     width: 100%;
     height: 100%;
     background-image: url(../picture/firstPage_background.png);
@@ -33,10 +145,12 @@ body {
 /*音乐符号*/
 .musicBlock {
     position: fixed;
+    z-index: 20;
     top: .15rem;
     right: .1rem;
     width: .3rem;
     height: 0.3rem;
+    cursor: pointer;
 }
 .musicIcon {
 	width: 100%;
@@ -54,12 +168,7 @@ body {
 	}
 }
 .musicStop {
-
-
 	display: none;
-
-
-
 	position: absolute;
 	top: 50%;
 	left: .04rem;
@@ -67,10 +176,11 @@ body {
 	transform: rotate(45deg);
 	transform-origin: center center;
 	border: 0;
-	border-bottom: 2px solid #000;
+	border-bottom: 1.6px solid #000;
 }
 .slideGuide {
 	position: fixed;
+	z-index: 20;
 	bottom: .3rem;
 	left: 50%;
 	transform: translateX(-50%);
@@ -107,56 +217,74 @@ body {
 		transform: translateY(-.3rem);
 	}
 }
+.logoBlock {
+	position: fixed;
+	z-index: 20;
+	top: .2rem;
+	left: .1rem;
+	height: .3rem;
+	width: .7rem;
+	background-image: url(../picture/logo.png);
+	background-size: 100% 100%;
+}
 
 
 
 /*第一页的样式*/
-.firstPage, .secondPage, .thirdPage, .eighthPage, .lastPage {
+.swiper-slide {
+	/*display: none;*/
 	width: 100%;
 	height: 100%;
 	margin: 0;
 }
-.secondPage, .thirdPage, .eighthPage, .lastPage {
-
-
-	display: none;
-
-
-}
 
 /*山 * 2*/
 .firstMountBack1 {
-    position: fixed;
+    position: absolute;
     bottom: 1.5rem;
     right: .2rem;
     width: 1rem;
     height: auto;
 }
 .firstMountBack2, .secondMountBack2,
-.thirdMountBack2, .eighthMountBack2,
-.lastMountBack2 {
-    position: fixed;
+.thirdMountBack2, .fourthMountBack2,
+.fifthMountBack2, .sixthMountBack2,
+.seventhMountBack2, .eighthMountBack2,
+.ninthMountBack2, .lastMountBack2 {
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 1.6rem;
     height: auto;
 }
-.secondMountBack1, .thirdMountBack1, .eighthMountBack1, .lastMountBack1 {
-	position: fixed;
+.secondMountBack1, .thirdMountBack1,
+.fourthMountBack1, .fifthMountBack1,
+.sixthMountBack1, .seventhMountBack1,
+.eighthMountBack1, .ninthMountBack1,
+.lastMountBack1 {
+	position: absolute;
 	z-index: 10;
     bottom: 1rem;
     right: .1rem;
     width: 1rem;
     height: auto;
 }
-.thirdMountBack1, .eighthMountBack1, .lastMountBack1 {
+.thirdMountBack1, .fourthMountBack1,
+.fifthMountBack1, .sixthMountBack1,
+.eighthMountBack1, .ninthMountBack1,
+.lastMountBack1 {
     right: -.1rem;
     bottom: .7rem;
 }
 .firstMountBack1 img, .firstMountBack2 img,
 .secondMountBack1 img, .secondMountBack2 img,
 .thirdMountBack1 img, .thirdMountBack2 img,
+.fourthMountBack1 img, .fourthMountBack2 img, 
+.fifthMountBack1 img, .fifthMountBack2 img,
+.sixthMountBack1 img, .sixthMountBack2 img, 
+.seventhMountBack1 img, .seventhMountBack2 img,
 .eighthMountBack1 img, .eighthMountBack2 img,
+.ninthMountBack1 img, .ninthMountBack2 img,
 .lastMountBack1 img, .lastMountBack2 img {
 	width: 100%;
 	height: auto;
@@ -200,14 +328,14 @@ body {
 }
 .firstTbarContent {
     position: absolute;
-    top: .2rem;
+    top: .35rem;
     left: 0;
     width: .08rem;
     margin: 0;
     margin-right: .06rem;
-    font-size: .04rem;
+    font-size: .1rem;
     color: #9b692f;
-    line-height: .12rem;
+    line-height: .16rem;
 }
 .firstTbarBlock {
     position: absolute;
@@ -218,6 +346,7 @@ body {
     background-image: url(../picture/firstPage_title_block.png);
     background-size: 100% 100%;
     text-align: center;
+    animation-delay: 1.5s;
 }
 .firstTbarBlock p {
     position: absolute;
@@ -228,6 +357,25 @@ body {
     font-size: .3rem;
     color: #9b692f;
     line-height: .4rem;
+}
+.firstTopMark {
+    position: absolute;
+    bottom: .1rem;
+    right: .1rem;
+    width: .32rem;
+    height: .32rem;
+    background-image: url(../picture/firstPage_mark_background.png);
+    background-size: 100% 100%;
+    opacity: 0;
+}
+.firstTopMark img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: .22rem;
+    height: .22rem;
+	margin: 0;
+    transform: translate(-50%, -50%);
 }
 /*苦静悟放文字部分*/
 .firstTBcontent {
@@ -260,16 +408,21 @@ body {
     height: 2.9rem;
 }
 .secondBline, .thirdBline,
-.eighthBline, .lastBline {
-	position: fixed;
+.fourthBline, .fifthBline,
+.sixthBline, .seventhBline,
+.eighthBline, .ninthBline,
+.lastBline {
+	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 3rem;
 	height: 2.5rem;
 }
 .firstBline img, .secondBline img,
-.thirdBline img, .eighthBline img,
-.lastBline img {
+.thirdBline img, .fourthBline img,
+.fifthBline img, .sixthBline img,
+.seventhBline img, .eighthBline img,
+.ninthBline img, .lastBline img {
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -277,8 +430,8 @@ body {
 .firstBblock {
     position: fixed;
     bottom: .7rem;
-    left: 1.95rem;
-    width: .5rem;
+    left: 2rem;
+    width: .4rem;
     height: 1rem;
     background: url(../picture/firstPage_block1.png);
     background-size: 100% 100%;
@@ -288,18 +441,21 @@ body {
 	top: 50%;
 	transform: translateY(-50%);
     display: inline-block;
-    width: .11rem;
+    width: .12rem;
     height: auto;
     margin: 0;
-    font-size: .1rem;
+    font-size: .12rem;
     color: #9b692f;
     line-height: .14rem;
+}
+.firstBblock p:first-child {
+	margin-right: .1rem;
 }
 
 /*第二页*/
 /*介绍牌*/
-.secondBlock {
-    position: fixed;
+.secondBlock, .seventhBlock {
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     top: .6rem;
@@ -310,10 +466,14 @@ body {
     background-size: .5rem .5rem;
 }
 /*河流*/
-.secondBline1, .thirdBline1, .eighthBline1, .lastBline1 {
+.secondBline1, .thirdBline1,
+.fourthBline1, .fifthBline1,
+.sixthBline1, .seventhBline1,
+.eighthBline1, .ninthBline1,
+.lastBline1 {
     position: absolute;
     z-index: 10;
-    top: 1rem;
+    top: .8rem;
     left: 50%;
     transform: translateX(-50%);
     width: 3.6rem;
@@ -326,37 +486,29 @@ body {
 }
 /*文章细节*/
 .secondBback, .seventhBback {
-    position: fixed;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: .85rem;
     width: 2.6rem;
     height: 4.3rem;
+	color: #563c1d;
     background: rgba(172, 132, 83, .5);
 }
-.secondBback {
-
-
-
-	display: none;
-
-
-
-
-}
 .secondBtitle {
-	margin: .4rem auto 0;
+	margin: .2rem auto 0;
 	font-size: .38rem;
 	text-align: center;
 	letter-spacing: .1rem;
 }
 .secondBcontent {
     padding: 0 .06rem;
-    margin: .4rem auto 0;
-    font-size: .16rem;
+    margin: .2rem auto 0;
+    font-size: .14rem;
+    font-family: '';
     text-align: justify;
     letter-spacing: .02rem;
-    line-height: .22rem;
+    line-height: .2rem;
 }
 /*鸟*/
 .secondBbird {
@@ -374,43 +526,52 @@ body {
 
 /*第三页样式*/
 /*头部文字样式*/
-.thirdPageBar, .eighthPageBar {
+.thirdPageBar, .fourthPageBar,
+.fifthPageBar, .sixthPageBar,
+.eighthPageBar, .ninthPageBar {
     margin: 0 0.15rem;
-    padding: .25rem 0 .1rem;
+    padding: .25rem 0 .1rem .8rem;
     border-bottom: 2px solid rgb(172, 132, 83);
 	color: #563c1d;
 }
-.thirdPageBar div, .eighthPageBar div {
+.thirdPageBar div, .fourthPageBar div,
+.fifthPageBar div, .sixthPageBar div,
+.eighthPageBar div, .ninthPageBar div {
 	display: inline-block;
 	margin: 0 .1rem 0 0;
 	padding: 0;
 	font-size: .16rem;
 	letter-spacing: .04rem;
 }
-.thirdPageTitle {
-	margin: .15rem;
+.thirdPageTitle, .fourthPageTitle,
+.fifthPageTitle, .sixthPageTitle {
+    margin: .25rem .15rem 0;
 	padding: 0;
 	color: #563c1d;
 }
-.thirdTitle1 {
+.thirdTitle1, .fourthTitle1,
+.fifthTitle1, .sixthTitle1 {
 	margin: 0;
 	font-size: .3rem;
 	letter-spacing: .08rem;
 }
-.thirdTitle2 {
+.thirdTitle2, .fourthTitle2,
+.fifthTitle2, .sixthTitle2 {
 	margin: .3rem 0 .2rem;
 	font-size: .2rem;
 	letter-spacing: .03rem;
 }
-.thirdTitle3 {
+.thirdTitle3, .fourthTitle3,
+.fifthTitle3, .sixthTitle3 {
     margin: 0;
-    font-size: .18rem;
+    font-size: .16rem;
+    font-family: '';
     letter-spacing: .02rem;
-    line-height: .24rem;
+    line-height: .26rem;
 }
 /*店铺图片展示*/
 .thirdBcard, .fourthBcard, .fifthBcard, .sixthBcard, .eighthBcard2, .ninthBcard2 {
-	position: fixed;
+	position: absolute;
 	bottom: .7rem;
 	left: 50%;
 	transform: translateX(-50%);
@@ -436,26 +597,56 @@ body {
 
 /*第七页样式*/
 .seventhBtitle {
-	margin: .3rem auto 0;
-	font-size: .38rem;
-	text-align: center;
-	letter-spacing: .06rem;
+	margin: .2rem auto 0;
+    font-size: .34rem;
+    text-align: center;
+    letter-spacing: .06rem;
 }
 .seventhBturn {
-	margin: .6rem auto .5rem;
-	font-size: .2rem;
-	text-align: center;
-	letter-spacing: .06rem;
+    margin: .2rem auto .1rem;
+    font-size: .12rem;
+    text-align: center;
+    letter-spacing: .06rem;
 }
 .seventhBturn span {
-	font-size: .34rem;
+    font-size: .16rem;
+    font-weight: bolder;
 }
 .seventhBcontent {
 	margin: 0 auto;
-	padding: 0 .06rem;
-	font-size: .17rem;
-	letter-spacing: .02rem;
-	line-height: .22rem;
+    padding: 0 .06rem;
+    font-size: .12rem;
+    letter-spacing: .02rem;
+    line-height: .2rem;
+	font-family: '';
+}
+.seventhBcontent p {
+	margin: .1rem 0;
+	text-align: justify;
+}
+.seventhBcontent span {
+	color: #964c0a;
+    font-weight: bolder;
+}
+.seventhBcontent strong {
+	font-size: .13rem;
+}
+.seventhBspecial {
+	margin: .4rem auto 0;
+    padding: 0 .06rem;
+    font-size: .16rem;
+    letter-spacing: .02rem;
+    line-height: .24rem;
+	font-family: '';
+	text-align: center;
+}
+.seventhBspecial strong {
+	color: #964c0a;
+	font-size: .22rem;
+}
+.seventhBspecial span {
+	font-size: .22rem;
+	font-weight: bolder;
 }
 .seventhBfish {
 	position: absolute;
@@ -470,14 +661,7 @@ body {
 }
 
 /*第八页样式*/
-.eighthBcards {
-
-
-	display: none;
-
-
-}
-.eighthPageTitle {
+.eighthPageTitle, .ninthPageTitle {
 	margin: .15rem auto 0;
 	font-size: .35rem;
 	text-align: center;
@@ -485,7 +669,7 @@ body {
 	letter-spacing: .08rem;
 }
 .eighthBcard1, .ninthBcard1 {
-	position: fixed;
+	position: absolute;
 	top: 1.3rem;
 	left: 50%;
 	transform: translateX(-50%);
@@ -510,7 +694,7 @@ body {
 	text-align: center;
 }
 .lastPageLocation {
-	position: fixed;
+	position: absolute;
 	top: 1.7rem;
 	left: 50%;
 	transform: translateX(-50%);
@@ -524,10 +708,10 @@ body {
 }
 /*详细信息部分*/
 .lastPageConnection {
-	position: fixed;
+	position: absolute;
 	bottom: 1.1rem;
-	left: 0;
-	padding: 0 0 0 .15rem; 
+	left: .15rem;
+	padding: 0;
 	font-size: .18rem;
 	color: #563c1d;
 	letter-spacing: .04rem;
