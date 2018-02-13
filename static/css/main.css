@@ -505,7 +505,7 @@ body {
     padding: 0 .06rem;
     margin: .2rem auto 0;
     font-size: .14rem;
-    font-family: '';
+    font-family: Heiti SC, Droidsansfallback, Dengxian, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York';
     text-align: justify;
     letter-spacing: .02rem;
     line-height: .2rem;
@@ -565,7 +565,7 @@ body {
 .fifthTitle3, .sixthTitle3 {
     margin: 0;
     font-size: .16rem;
-    font-family: '';
+    font-family: Heiti SC, Droidsansfallback, Dengxian, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York';
     letter-spacing: .02rem;
     line-height: .26rem;
 }
@@ -605,6 +605,7 @@ body {
 .seventhBturn {
     margin: .2rem auto .1rem;
     font-size: .12rem;
+    font-family: Heiti SC, Droidsansfallback, Dengxian, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York';
     text-align: center;
     letter-spacing: .06rem;
 }
@@ -617,8 +618,8 @@ body {
     padding: 0 .06rem;
     font-size: .12rem;
     letter-spacing: .02rem;
-    line-height: .2rem;
-	font-family: '';
+    line-height: .2rem;    
+    font-family: Heiti SC, Droidsansfallback, Dengxian, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York';
 }
 .seventhBcontent p {
 	margin: .1rem 0;
